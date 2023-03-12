@@ -1,2 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik+Iso&display=swap');
+
+*,
+::before,
+::after {
+  font-size: calc(.2em + 1vw);
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Rampart One', cursive;
+  line-height: 1.2;
+  margin: 1em 0;
+  background-color: #000000;
+}
+
+input {
+  display: none;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 5%;
+  transition: .3s ease;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 50vw;
+}
+
 
 
