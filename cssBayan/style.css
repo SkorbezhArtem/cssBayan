@@ -31,5 +31,120 @@ img {
   max-width: 50vw;
 }
 
+.title {
+  letter-spacing: 0.5em;
+  text-align: center;
+  background: linear-gradient(90deg, #e933ff, #ffb400, #ff3333, #334dff, #e933ff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textflow 5s linear infinite;
+}
+
+@keyframes textflow {
+  from {background-position: 0% center}         
+  to {background-position: 200% center}
+}
+
+.accordion-title {
+  border-top: .1em solid;
+  border-image: linear-gradient(45deg, purple, orange) 1;
+  padding: 0.5em 0;
+  transition: color 0.3s ease;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-item {
+  transition: .3s ease;
+  display: block;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 0.1em;
+}
+@media (hover: hover) {
+  .accordion:hover .accordion-item:hover .accordion-item-image {
+    max-height: 50em;
+    padding: 1.4em 0 1em 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+  .accordion:hover .accordion-icon {
+    opacity: 1;
+  }
+  .accordion:hover .accordion-item:hover .accordion-icon {
+    transform: rotate(135deg);
+  }
+  .accordion-title:hover {
+    color: #E0B0FF;
+  }
+  .accordion:hover .accordion-item-image {
+    max-height: 0;
+    transform: scale(0.5);
+    padding: 0;
+    opacity: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: all 1.4s ease;
+  }
+}
+
+.accordion input:checked ~ .accordion-item-image {
+  max-height: 50em;
+  padding: 1.4em 0 1em 0;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.accordion-item input:checked ~ .accordion-title .accordion-icon {
+  transform: rotate(135deg);
+}
+
+.accordion-icon {
+  margin-right: 1em;
+  transition: 1s ease;
+}
+
+.accordion input:checked ~ .accordion-title {
+  color: #E0B0FF;
+}
+
+.accordion-item-image,
+.accordion input ~ .accordion-item-image {
+  max-height: 0;
+  transform: scale(0.5);
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 1.5s ease;
+}
+
+@media (max-width: 1920px) {
+  .wrapper {
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 820px) {
+  * {
+    font-size: calc(.5em + 1vw);
+  }
+  .wrapper {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 325px) {
+  .wrapper {
+    max-width: 90vw;
+  }
+}
+
 
 
