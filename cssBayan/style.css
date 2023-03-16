@@ -102,6 +102,7 @@ h3 {
   padding: 1.4em 0 1em 0;
   transform: scale(1);
   opacity: 1;
+  filter: saturate(3);
 }
 
 .accordion-item input:checked ~ .accordion-title .accordion-icon {
@@ -115,7 +116,7 @@ h3 {
 }
 
 .accordion input:checked ~ .accordion-title {
-  color: #E0B0FF;
+  color: #7F00FF;
 }
 
 .accordion-item-image,
